@@ -4,20 +4,53 @@
 <title>Contents</title>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- / CSS-->
+<style>
+    #선택자1{
+        color: rgb(0, 255, 136);
+    }
+    .saw11{
+        color: rgba(0, 128, 58, 0.61);
+    }
+    h2,h3 {
+        color: red;
+        text-decoration: underline;
+        }
+     h1 {
+        color:green;
+        text-decoration: none;
+        text-align: center;
+        font-size: 50px;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 30px;
+        
+       }
+     a,p,h2,h3 {
+        text-decoration: none; 
+        text-align: center;
+       }
+       /* CSS 주석표시 임 */
+</style>
+<!--CSS (ex.코드에 모든그룹 h2,h3,a,p 의 색상을 변경해 준다, 코드 내 style 은 html 속성임 ) /-->
+<!--CSS (ex.text-decoration: underline; >> none; 일 경우 밑줄 제거됨 ) /-->
+<!--CSS (ex.font-size: 45px; > h1의 폰트사이즈 수정 , text-align: center; 텍스트위치값 ) /-->
+<!--CSS (ex.테크를 감싸고 있는 "?? " 큰따움표 이면 html 속성임/-->
+<!--CSS (ex.선택자(selector / w3school 내용 참고) 우선순위 높은 순 ID -# > class > tag  /-->
 </head>
 
 <header> 
-    <strong><h1><a href="index.html" target="index 별도">CONTENTS</a></h1></strong>
+    <strong><a href="index.html" target="index 별도"><h1>CONTENTS</h1></a></strong>
 </header>
 
 
 <nav>
 <body>
 <ol>
-<p><a href="index.html" target="index 별도"> 1.CREATIVE & INNOVATION - J C&S</a></p>
-<p><a href="홈페이지 만들기 연습 - Smart Eng.html"target=" "> 2.SMART ENGINEERING & SMART FACTORY</a></p>
+<p><a href="index.html" target="index 별도" class="saw11"> 1.CREATIVE & INNOVATION - J C&S</a></p>
+<p><a href="홈페이지 만들기 연습 - Smart Eng.html"target=" " class="saw" id="선택자1"> 2.SMART ENGINEERING & SMART FACTORY</a></p>
 <p><a href="홈페이지 만들기 연습 i-Loic 소개.html"target=" "> 3.CUSTOMER SUCCESS STORY</a></p><br> 
-<p>-연습예제-</p>
+<p><h3>-연습예제-</h3></p>
 <p><a href="홈페이지 만들기 연습 table.html"target=" ">4.table만들기</a></p>
 <p><a href="https://www.autodesk.co.kr/"target=" ">5.Autodesk 홈페이지 링크</a></p>
 <p><a href="ID,Password 만들기.html"target=" ">6.id,Password 만들기</a></p>
@@ -29,6 +62,7 @@
 <p><a href="11.파일업로드.html"target=" ">11.파일업로드</a></p> 
 <p><a href="12.숫자만 입력란 키보드생성.html"target=" ">12.숫자만 입력란 키보드생성</a></p> 
 <p><a href="13.홀더택스트, 자동완성, 오토포커스.html"target=" ">13.홀더택스트, 자동완성, 오토포커스</a></p> 
+<p><a href="CSS 실습-레이아웃.html"target=" ">14.CSS 레이아웃</a></p>
 </ol>
 </body>
 </nav>
@@ -36,13 +70,13 @@
 <section>
 <article>
 <h2>본문 소개</h2>
-<p>스마트 엔지니어링 시스템은 미래적 가치를 높여줄 수 있는 <u>스마트한 설계업무 환경</u>으로서, 제조 아이템의 최적화된 
+<p style="color: green;">스마트 엔지니어링 시스템은 미래적 가치를 높여줄 수 있는 <u>스마트한 설계업무 환경</u>으로서, 제조 아이템의 최적화된 
     설계 프로세스 환경을 제공하고,<br>설계 의도 및 축척 된 정보를 기반으로 데이터의 지능적 활용과 설계 프로세스를 
     자동화 함으로서 단시간 내 설계 업무를 완료할 수 있는 매우 편리하고 혁신적인 시스템 입니다.</p>
 </article>
 <p style="margin-top: 50px;"></p>
 <h2>본문2 소개</h2>
-<p>스마트 엔지니어링 시스템은 미래적 가치를 높여줄 수 있는 <u>스마트한 설계업무 환경</u>으로서, 제조 아이템의 최적화된 
+<p style="color: green;">스마트 엔지니어링 시스템은 미래적 가치를 높여줄 수 있는 <u>스마트한 설계업무 환경</u>으로서, 제조 아이템의 최적화된 
     설계 프로세스 환경을 제공하고,<br>설계 의도 및 축척 된 정보를 기반으로 데이터의 지능적 활용과 설계 프로세스를 
     자동화 함으로서 단시간 내 설계 업무를 완료할 수 있는 매우 편리하고 혁신적인 시스템 입니다.</p><Br>
         article은 본문단위를 의미하고 본문간의 묶음은 section 을 사용한다
@@ -69,13 +103,24 @@
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-<p><strong>기타 필요한 기능</strong>-조회수/무료/웹서버를 통해야 함 www or localhost 주소로 시작되어야 작동<br>
+<p style="color: hotpink;"><strong>기타 필요한 기능</strong>-조회수/무료/웹서버를 통해야 함 www or localhost 주소로 시작되어야 작동<br>
     >> <www class="tawk to">방문자,조회수  www.analytics.google.com</www></p>
+ <!--<p><strong>기타 필요한 기능</strong>-조회수/무료/웹서버를 통해야 함 www or localhost 주소로 시작되어야 작동<br>
+    >> <www class="tawk to">방문자,조회수  www.analytics.google.com</www></p>-->
 <p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/K3cYoZ9AFOI" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MN1g0490WAg" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krG7jVMUe_0" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 </body>
 </html>
